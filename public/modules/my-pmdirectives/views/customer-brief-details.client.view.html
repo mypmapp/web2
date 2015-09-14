@@ -1,0 +1,77 @@
+<div class="bs-callout bs-callout-info">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>
+                <span data-ng-bind="customer.title"></span>
+                <span data-ng-bind="customer.firstName"></span>
+                <span data-ng-bind="customer.lastName"></span>
+            </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <ui-gravatar gravatar-email="customer.emailPrimary" gravatar-options="options"></ui-gravatar>
+        </div>
+        <div class="col-lg-9">
+            <div class="row">
+                <div class="col-lg-3">
+                    <h4><strong>Address:</strong></h4>
+                    <h5 data-ng-bind="customer.addressLine1"></h5>
+                    <h5 data-ng-bind="customer.addressLine2"></h5>
+                    <h5 data-ng-bind="customer.addressLine3"></h5>
+                    <h5 data-ng-bind="customer.addressLine4"></h5>
+                    <h5 data-ng-bind="customer.postcode"></h5>
+                </div>
+                <div class="col-lg-3">
+                    <h4><strong>Contact Phone:</strong></h4>
+                    <h5 data-ng-bind="customer.phonePrimary"></h5>
+                    <h5 data-ng-bind="customer.phoneSecondary"></h5>
+                </div>
+                <div class="col-lg-3">
+                    <h4><strong>Contact Email:</strong></h4>
+                    <h5 data-ng-bind="customer.emailPrimary"></h5>
+                    <h5 data-ng-bind="customer.emailSecondary"></h5>
+                </div>
+                <div class="col-lg-3" ng-show="templateOptions.enableEdit">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a class="btn btn-block btn-primary"
+                               href="#!/{{templateOptions.customerType}}/{{customer._id}}/edit" role="button">Edit
+                                Cutomer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3" ng-show="templateOptions.enableViewNotes">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a class="btn btn-block btn-primary"
+                               href="#!/notes/{{templateOptions.customerType}}/{{customer._id}}/view" role="button">View
+                                Notes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3" ng-show="templateOptions.enableCreateNotes">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a class="btn btn-block btn-primary"
+                               href="#!/notes/{{customer._id}}/{{templateOptions.customerType}}/create" role="button">Create
+                                Notes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <small>
+                        <em class="text-muted">
+                            Created on
+                            <span data-ng-bind="customer.created | date:'mediumDate'"></span>
+                            by
+                            <span data-ng-bind="customer.user.displayName"></span>
+                        </em>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
