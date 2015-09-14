@@ -17,8 +17,20 @@
     </div>
     <div class="row">
         <div data-ng-repeat="purchaser in purchasers  | filter:searchText">
-            <customer-brief-details customer="purchaser" to="pto">
+            <customer-brief-details customer="purchaser" to="{
+			enableEdit: true,
+			enableCreateNotes: false,
+			enableViewNotes: false,
+			enableProfileView: false,
+			enablePropertyCreate: false,
+			enableCreatePropertySearchProfile: true,
+			enableViewPropertySearchProfile: true,
+			customerType:'purchasers',
+		}">
             </customer-brief-details>
         </div>
     </div>
+    <div class="alert alert-warning text-center" data-ng-if="purchasers.$resolved && !purchasers.length">
+		No purchasers yet, why don't you <a href="/#!/purchasers/create">create purchaser</a>?
+	</div>
    </section>

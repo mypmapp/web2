@@ -10,7 +10,7 @@ angular.module('core').controller('SidebarController', ['$scope', 'Authenticatio
                 {navUrl:'/#!/vendors/create',navText:'Register Vendor', navGroup:'vendor',navIon:'glyphicon glyphicon-user'},
                 {navUrl:'/#!/vendors',navText:'Find Vendor', navGroup:'vendor',navIon:'glyphicon glyphicon-search'},
                 {navUrl:'/#!/vendors/email',navText:'Email Vendor', navGroup:'vendor',navIon:'glyphicon glyphicon-envelope'},
-                {navUrl:'/#!/vendorcontactnotes',navText:'Vendor Notes', navGroup:'comments',navIon:'glyphicon glyphicon-pencil'},
+                {navUrl:'/#!/notes/vendors',navText:'Vendor Notes', navGroup:'comments',navIon:'glyphicon glyphicon-pencil'},
 
                 {navUrl:'+',navText:'Property', navGroup:'property',navIon:'divider'},
                 {navUrl:'#!/property/create',navText:'Register Property', navGroup:'property',navIon:'glyphicon glyphicon-home'},
@@ -22,6 +22,7 @@ angular.module('core').controller('SidebarController', ['$scope', 'Authenticatio
                 {navUrl:'/#!/purchasers/create',navText:'Register Purchaser', navGroup:'purchaser',navIon:'glyphicon glyphicon-plus'},
                 {navUrl:'/#!/purchasers',navText:'Find Purchaser', navGroup:'purchaser',navIon:'glyphicon glyphicon-tag'},
                 {navUrl:'/#!/purchasers/email',navText:'Email Purchaser', navGroup:'purchaser',navIon:'glyphicon glyphicon-bookmark'},
+                {navUrl:'/#!/notes/purchasers',navText:'Purchaser Notes', navGroup:'comments',navIon:'glyphicon glyphicon-pencil'},
 
                 //{navUrl:'+',navText:'Comments', navGroup:'comments',navIon:'divider'},
                 //{navUrl:'/#!/vendorcontactnotes',navText:'Vendor Notes', navGroup:'comments',navIon:'glyphicon glyphicon-pencil'},

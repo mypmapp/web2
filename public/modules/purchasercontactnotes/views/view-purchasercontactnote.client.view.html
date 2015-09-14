@@ -1,21 +1,64 @@
-<section data-ng-controller="PurchasercontactnotesController" data-ng-init="findOne()">
-	<div class="page-header">
-		<h1 data-ng-bind="purchasercontactnote.name"></h1>
-	</div>
-	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == purchasercontactnote.user._id))">
-		<a class="btn btn-primary" href="/#!/purchasercontactnotes/{{purchasercontactnote._id}}/edit">
-			<i class="glyphicon glyphicon-edit"></i>
-		</a>
-		<a class="btn btn-primary" data-ng-click="remove();">
-			<i class="glyphicon glyphicon-trash"></i>
-		</a>
-	</div>
-	<small>
-		<em class="text-muted">
-			Posted on
-			<span data-ng-bind="purchasercontactnote.created | date:'mediumDate'"></span>
-			by
-			<span data-ng-bind="purchasercontactnote.user.displayName"></span>
-		</em>
-	</small>
+<section data-ng-controller="PurchasercontactnotesController" data-ng-init="findPurchaserOne()">
+     <div class="page-header">
+        <h3>Purchaser Contact Notes</h3>
+    </div>
+    <customer-brief-details customer="purchaser">
+    </customer-brief-details>
+    <br>
+    <div class="well" data-ng-init="find()">
+
+        <div class="text-right">
+            <a class="btn btn-success" href="#!/notes/purchasers/{{purchaser._id}}/create">Add Contact Note</a>
+        </div>
+        <hr>
+        <div data-ng-repeat="cnote in purchasercontactnotes | filter: { purchaser: purchaser._id }">
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <i>Posted By</i>
+                    <span data-ng-bind="cnote.user.displayName"></span>
+                    <span class="pull-right" data-ng-bind="cnote.created | date:'mediumDate'"></span>
+                    <p ng-bind-html="cnote.notes"></p>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+    </div>
+ 
+ 
+    <!--<div class="page-header">-->
+    <!--    <h3>Purchaser Contact Notes</h3>-->
+    <!--</div>-->
+    <!--<customer-brief-details customer="purchaser">-->
+    <!--</customer-brief-details>-->
+    <!--<br>-->
+    <!--<div class="well" data-ng-init="find()">-->
+
+    <!--    <div class="text-right">-->
+    <!--        <a class="btn btn-success" href="#!/notes/purchasers/{{purchaser._id}}/create">Add Contact Note</a>-->
+    <!--    </div>-->
+    <!--    <hr>-->
+    <!--    <div data-ng-repeat="cnote in purchasercontactnote | filter: { purchaser: purchaser._id }">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-md-12">-->
+    <!--                <span class="glyphicon glyphicon-star"></span>-->
+    <!--                <span class="glyphicon glyphicon-star"></span>-->
+    <!--                <span class="glyphicon glyphicon-star"></span>-->
+    <!--                <span class="glyphicon glyphicon-star"></span>-->
+    <!--                <span class="glyphicon glyphicon-star"></span>-->
+    <!--                <i>Posted By</i>-->
+    <!--                <span data-ng-bind="cnote.user.displayName"></span>-->
+    <!--                <span class="pull-right" data-ng-bind="cnote.created | date:'mediumDate'"></span>-->
+    <!--                <p ng-bind-html="cnote.notes"></p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <hr>-->
+    <!--    </div>-->
+
+    <!--</div>-->
 </section>

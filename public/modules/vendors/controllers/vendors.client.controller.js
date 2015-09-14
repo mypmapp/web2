@@ -10,12 +10,6 @@ angular.module('vendors').controller('VendorsController', ['$scope', '$statePara
 		// If user is not signed in then redirect back home
 		if (!$scope.user) $location.path('/');
 
-		$scope.vto = {
-			enableEdit: true,
-			enableNotes: false,
-			customerType:'vendors',
-		};
-		
 		$scope.options = {
 					secure: true,
 					size: 150,

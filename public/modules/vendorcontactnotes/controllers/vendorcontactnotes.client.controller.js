@@ -25,7 +25,7 @@ angular.module('vendorcontactnotes').controller('VendorcontactnotesController', 
 
 		// Create new Vendorcontactnote
 		$scope.create = function() {
-			console.log('Vendor Details'+$scope.vendor);
+			//console.log('Vendor Details'+$scope.vendor);
 			// Create new Vendorcontactnote object
 			var vendorcontactnote = new Vendorcontactnotes ({
 				notes: this.htmlVariable,

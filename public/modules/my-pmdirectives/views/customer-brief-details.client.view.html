@@ -59,6 +59,38 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-3" ng-show="templateOptions.enableProfileView">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a class="btn btn-block btn-primary"
+                               href="#!/profile/{{templateOptions.customerType}}/{{customer._id}}/view" role="button">View Complete Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3" ng-show="templateOptions.enablePropertyCreate">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a class="btn btn-block btn-primary"
+                               href="#!/property/{{templateOptions.customerType}}/{{customer._id}}/create" role="button">Create Property</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3" ng-show="templateOptions.enableCreatePropertySearchProfile">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a class="btn btn-block btn-primary"
+                               href="#!/purchaser/searchprofile/{{templateOptions.customerType}}/{{customer._id}}/create" role="button">Create Search Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3" ng-show="templateOptions.enableViewPropertySearchProfile">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a class="btn btn-block btn-primary"
+                               href="#!/purchaser/searchprofile/{{templateOptions.customerType}}/{{customer._id}}/view" role="button">View Search Profile</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">

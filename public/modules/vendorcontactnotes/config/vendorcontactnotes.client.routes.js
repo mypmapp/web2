@@ -6,7 +6,7 @@ angular.module('vendorcontactnotes').config(['$stateProvider',
         // Vendorcontactnotes state routing
         $stateProvider.
             state('listVendorcontactnotes', {
-                url: '/vendorcontactnotes',
+                url: '/notes/vendors',
                 templateUrl: 'modules/vendorcontactnotes/views/list-vendorcontactnotes.client.view.html'
             }).
             state('createVendorcontactnote', {

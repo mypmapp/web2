@@ -10,13 +10,6 @@ angular.module('purchasers').controller('PurchasersController', ['$scope', '$sta
 		// If user is not signed in then redirect back home
 		if (!$scope.user) $location.path('/');
 
-
-		$scope.pto = {
-			enableEdit: true,
-			enableNotes: false,
-			customerType:'purchasers',
-		};
-		
 		$scope.options = {
 					secure: true,
 					size: 150,

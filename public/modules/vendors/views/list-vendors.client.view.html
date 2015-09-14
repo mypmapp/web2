@@ -17,8 +17,18 @@
     </div>
     <div class="row">
         <div data-ng-repeat="vendor in vendors  | filter:searchText">
-            <customer-brief-details customer="vendor" to="vto">
+            <customer-brief-details customer="vendor" to="{
+			enableEdit: true,
+			enableCreateNotes: false,
+			enableViewNotes: false,
+			enableProfileView: true,
+			enablePropertyCreate: false,
+			customerType:'vendors',
+		}">
             </customer-brief-details>
         </div>
     </div>
+    <div class="alert alert-warning text-center" data-ng-if="vendors.$resolved && !vendors.length">
+		No vendors yet, why don't you <a href="/#!/vendors/create">create vendor</a>?
+	</div>
 </section>
