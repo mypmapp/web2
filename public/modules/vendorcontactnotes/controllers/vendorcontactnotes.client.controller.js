@@ -16,6 +16,12 @@ angular.module('vendorcontactnotes').controller('VendorcontactnotesController', 
 			enableCreateNotes:true,
 			customerType:'vendors',
 		};
+		
+		$scope.options = {
+					secure: true,
+					size: 150,
+					defaultImage: 'mm'
+				};
 
 		// Create new Vendorcontactnote
 		$scope.create = function() {

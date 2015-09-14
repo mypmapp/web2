@@ -15,6 +15,12 @@ angular.module('vendors').controller('VendorsController', ['$scope', '$statePara
 			enableNotes: false,
 			customerType:'vendors',
 		};
+		
+		$scope.options = {
+					secure: true,
+					size: 150,
+					defaultImage: 'mm'
+				};
 
 		$scope.saveState = function() {
 			var deferred = $q.defer();

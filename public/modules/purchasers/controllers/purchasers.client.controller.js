@@ -16,6 +16,12 @@ angular.module('purchasers').controller('PurchasersController', ['$scope', '$sta
 			enableNotes: false,
 			customerType:'purchasers',
 		};
+		
+		$scope.options = {
+					secure: true,
+					size: 150,
+					defaultImage: 'mm'
+				};
 
 		$scope.saveState = function() {
 			var deferred = $q.defer();
